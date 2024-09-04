@@ -5,14 +5,7 @@
 * Если передано больше двух аргументов, то метод должен выбрасывать предупреждение "Внимание! Передано больше указанного кол-ва аргументов", но продолжить свое выполнение.
 * */
 
-class CustomError extends Error {
-    constructor(message = '') {
-        super(message);
-        this.name = this.constructor.name;
-    }
-}
-
-class ArgumentTypeError extends CustomError {}
+class ArgumentTypeError extends Error {}
 
 function multiply(number1, number2) {
     if (arguments.length > 2) {
